@@ -1,0 +1,169 @@
+{% load i18n %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Your Basic Site Informations -->
+        <title>PyCon PE - Em breve</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <!-- Google WEB Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700|Abel' rel='stylesheet' type='text/css' />
+		
+		<link href='{{ STATIC_URL }}css/fonts/bebas-neue-fontfacekit/stylesheet.css' rel='stylesheet' type='text/css'>
+
+        <!-- Site CSS Files -->
+        <link href="{{ STATIC_URL }}css/main.css" rel="stylesheet" type="text/css"/>
+
+        <!-- jQuery JavaScript script -->
+        <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-latest.min.js"></script>
+		
+        <!-- MyHint JavaScript jQuery plugin -->
+        <script type="text/javascript" src="{{ STATIC_URL }}js/myHint.js"></script>
+
+        <script type="text/javascript" src="{{ STATIC_URL }}js/main.js"></script>
+    </head>
+    <body>
+        <div class="header wrapper blockCenter topPadding">
+            <img src="{{ STATIC_URL }}images/logo.png" alt="LOGO" />
+        </div>
+        <div class="wrapper blockCenter rocketSpacer">
+            <img src="{{ STATIC_URL }}images/line.png" alt="-----------------------------------"/>
+        </div>
+        <div class="wrapper blockCenter">
+            <div class="floatLeft">
+                <div class="info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. 
+                    <div class="time">
+                        <ul>
+                            <li>
+                                <span id="days">0</span>
+                                <span class="timeDescription">DAYS</span>
+                            </li>
+                            <li class="separator">
+                                <img src="{{ STATIC_URL }}images/separator.png" alt="--" />
+                            </li>
+                            <li>
+                                <span id="hours">0</span>
+                                <span class="timeDescription">HOURS</span>
+                            </li>
+                            <li class="separator">
+                                <img src="{{ STATIC_URL }}images/separator.png" alt="--" />
+                            </li>
+                            <li>
+                                <span id="minutes">0</span>
+                                <span class="timeDescription">MINUTES</span>
+                            </li>
+                            <li class="separator">
+                                <img src="{{ STATIC_URL }}images/separator.png" alt="--" />
+                            </li>
+                            <li>
+                                <span id="seconds">0</span>
+                                <span class="timeDescription">SECONDS</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="timeToLanch">
+                        <img src="{{ STATIC_URL }}images/launch.png" alt="Launch" />
+                    </div>
+                </div>
+            </div>
+            <img src="{{ STATIC_URL }}images/rocket.png" alt="ROCKET" class="floatRight"/>
+        </div>
+        <div class="lightBlue clear">
+            <div class="wrapper blockCenter subscribe">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <input id="subscribe" class="subscribe floatLeft" type="text" name="email" />
+                    <button id="signUp" class="signUp floatRight">{% trans 'Enviar' %}</button>
+                    <div class="clear">&nbsp;</div>
+                </form>
+            </div>
+        </div>
+        <div class="darkBlue clear">
+            <div class="wrapper blockCenter">
+                <div class="about collumn floatLeft">
+                    <span class="title">{% trans 'SOBRE NÓS' %}</span>
+                    <p class="plainText">
+                        Vivamus pretium volutpat tellus utes gravida. Donec ante
+                        justo, ullamcorper laoreet euismod eu, fringilla nec ipsum.
+                        Etiam adipiscing.
+                    </p>
+                    <p class="plainText">
+                        Purus ut tempus. Cum socis natoque penatibus et magnis dis
+                        parturient montes, nascetures ridiculus mus. In nulla ligula.
+                    </p>
+                    <p class="plainText">
+                        Rhoncus vitae gravida ullamcorper eros. Integer gravida
+                        pulvinar lectus, a ullamcorper mauris ultri cies ates.
+                        Nteger eleifend lacus quis eros interdum lorem deonec
+                        ipsum sit amet. Cum sociis natoque penatibus et magnis dis.
+                        Nteger eleifend lacus quis eros interdum lorem deonec
+                        ipsum sit amet per setera si.
+                    </p>
+                </div>
+                <div class="ourTwitts collumn floatLeft leftSpacer">
+                    <span class="title">{% trans 'NOSSOS TWEETS' %}</span>
+                    <ul class="twitts">
+                        <li>
+                            <a href="https://twitter.com/pugpe" class="twittURL">#pugpe</a>
+                            Status text...
+                            <span class="time">Twitter Date</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="followUsURL floatRight clear" target="_blank">follow us on twitter</a>
+                </div>
+                <div class="contactUs collumn floatLeft leftSpacer">
+                    <span class="title">{% trans 'FALE CONOSCO' %}</span>
+                    <div class="contactBackground">
+                        <ul>
+                            <li>
+                                <input class="contactInput required" type="text" name="name" />
+                            </li>
+                            <li>
+                                <input class="contactInput required email" type="text" name="email" />
+                            </li>
+                            <li>
+                                <input class="contactInput required" type="text" name="subject" />
+                            </li>
+                            <li>
+                                <textarea class="contactInput required" name="message" cols="28" rows="4"></textarea>
+                            </li>
+                            <li>
+                                <button class="sendMessage" id="sendMessage">{% trans 'ENVIAR MENSAGEM' %}</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear">&nbsp;</div>
+            </div>
+        </div>
+        <div class="wrapper blockCenter footer clear">
+            <div class="copyright floatLeft">
+                PyCon PE 2012 - Python User Group Pernambuco
+            </div>
+            <div class="floatRight">
+                <ul>
+                    <li class="menuItem floatLeft">
+                        <a href="#" target="_blank">
+                            <img src="{{ STATIC_URL }}images/rss.png" alt="RSS" />
+                        </a>
+                    </li>
+                    <li class="menuItem floatLeft">
+                        <a href="https://twitter.com/pugpe" target="_blank">
+                            <img src="{{ STATIC_URL }}images/twitter.png" alt="Twitter" />
+                        </a>
+                    </li>
+                    <li class="menuItem floatLeft">
+                        <a href="https://www.facebook.com/pug.pe" target="_blank">
+                            <img src="{{ STATIC_URL }}images/facebook.png" alt="Facebook" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,292 @@
+/* 
+    Document   : main
+    Created on : 19.09.2011., 11.13.00
+    Author     : vladica savic
+    Description:
+        Main CSS file for LANDEROUS project.
+*/
+
+/*
+    Include clear.css to reset all browser defaults stylesheets, and include all
+    common frequently used CSS classes.
+*/
+@import url("clear.css");
+@import url("common.css");
+
+body
+{
+    background: url('../images/background.png');
+    font-family: arial;
+}
+div.wrapper
+{
+    width: 900px;
+}
+div.topPadding
+{
+    margin-top: 50px;
+}
+div.rocketSpacer
+{
+    margin-top: 30px;
+}
+div.info
+{
+    width: 615px;
+    position: absolute;
+    font-family: 'BebasNeueRegular',Arial,sans-serif;
+    color: #359F5D;
+    font-size: 47px;
+	line-height: 45px;
+    margin-top: 35px;
+}
+div.info a
+{
+    color: #f88228;
+    text-decoration: none;
+}
+div.time
+{
+    margin-top: 55px;
+    color: #f88228;
+}
+div.time ul li
+{
+    width: 56px;
+    text-align: center;
+    float: left;
+}
+div.time ul li.separator
+{
+    margin: 25px 10px 0px 10px;
+}
+div.time ul li.separator img
+{
+    vertical-align: top
+}
+span.timeDescription
+{
+    font-family: 'Abel';
+    font-size: 14px;
+    color: #A7A7A7;
+    display: block;
+}
+div.timeToLanch
+{
+    clear: both;
+    display: block;
+    padding-top: 20px;
+    padding-left: 35px;
+}
+div.lightBlue
+{
+    background: url('../images/light_green_bg.jpg');
+    padding-bottom: 15px;
+    padding-top: 30px;
+}
+div.darkBlue
+{
+    background: url('../images/dark_green_bg.jpg');
+    padding: 32px 0;
+}
+div.subscribe
+{
+    background: url('../images/subscribe_bg.png');
+    background-repeat: no-repeat;
+    padding: 15px;
+    width: 870px;
+}
+input.subscribe
+{
+    background: url('../images/subscribe_bar.png');
+    background-repeat: no-repeat;
+    border: none;
+    vertical-align: top;
+    padding: 11px 15px;
+    width: 655px;
+    font-family: 'Abel';
+    font-size: 24px;
+    color: #A3A3A3;
+}
+button.signUp
+{
+    background: url('../images/sign_up_btn.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    border: none;
+    font-family: 'Abel';
+    font-size: 30px;
+    width: 170px;
+    height: 52px;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+button.signUp:hover
+{
+    background-position: 0 100%;
+}
+button.sendMessage
+{
+    background: url('../images/send_message_btn.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    border: none;
+    font-family: 'Abel';
+    font-size: 18px;
+    width: 248px;
+    height: 31px;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+button.sendMessage:hover
+{
+    background-position: 0 100%;
+}
+div.collumn
+{
+    width: 275px;
+}
+span.title
+{
+    font-family: 'Abel';
+    font-size: 24px;
+    color: #FFFFFF;
+}
+p.plainText
+{
+    color: #FFFFFF;
+    font-family: 'Maven Pro';
+    font-size: 13px;
+    margin-top: 15px;
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 18px;
+}
+ul.twitts
+{
+    color: #FFFFFF;
+    font-family: 'Maven Pro';
+    font-size: 13px;
+    margin-top: 15px;
+}
+ul.twitts li
+{
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 18px;
+}
+a.twittURL
+{
+    color: #104223;
+    text-decoration: none;
+    margin-right: 5px;
+}
+span.time
+{
+    color: #104223;
+    display: block;
+}
+div.leftSpacer
+{
+    margin-left: 35px;
+}
+div.contactBackground
+{
+    background: url('../images/contact_bg.png');
+    background-repeat: no-repeat;
+    width: 246px;
+    height: 267px;
+    margin-top: 20px;
+    padding: 15px;
+}
+input.contactInput
+{
+    background: url('../images/contact_short_input.png');
+    background-repeat: no-repeat;
+    width: 230px;
+    height: 32px;
+    border: none;
+    padding: 0 10px;
+    display: table-cell;
+    line-height: 32px;
+    font-family: 'Maven Pro';
+    font-size: 13px;
+    color: #A3A3A3;
+}
+textarea.contactInput
+{
+    background: url('../images/contact_long_input.png');
+    background-repeat: no-repeat;
+    width: 230px;
+    min-width: 230px;
+    max-width: 230px;
+    height: 62px;
+    min-height: 62px;
+    max-height: 62px;
+    border: none;
+    padding: 10px;
+    display: block;
+    font-family: 'Maven Pro';
+    font-size: 13px;
+    color: #A3A3A3;
+    overflow: hidden;
+}
+div.contactUs ul li
+{
+    margin-bottom: 15px;
+}
+a.followUsURL
+{
+    color: #FFFFFF;
+    font-family: 'Maven Pro';
+    font-size: 13px;
+    margin-top: 15px;
+    text-align: right;
+}
+div.footer
+{
+    color: #8A8A8A;
+    font-family: 'Maven Pro';
+    font-size: 13px;
+    height: 125px;
+    margin-top: 20px;
+}
+div.footer a
+{
+    color: #8A8A8A;
+}
+div.copyright
+{
+    padding-top: 10px;
+}
+div.footer ul, div.footer li
+{
+    display: inline;
+}
+div.footer li
+{
+    margin-left: 10px;
+}
+div.footer li.checkOut
+{
+    margin-right: 15px;
+}
+div.footer li.menuItem
+{
+    display: block;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    width: 30px;
+}
+div.footer li.menuItem a img
+{
+    position: absolute;
+    border: none;
+}
+div.footer li.menuItem a img:hover
+{
+    top: -30px;
+}
