@@ -3,4 +3,5 @@
 *.pyo
 settings_local.py
 media/*
-deploy/*
+deploy/static/*
+deploy/media/*

@@ -1,0 +1,23 @@
+server {
+    listen 80;
+    server_name _;
+
+
+    location /static/ {
+        root /srv/pyconpe/deploy;
+        }
+
+    location /media/ {
+        root /srv/pyconpe/deploy;
+        expires 30d;
+    }
+
+    location / {
+        proxy_pass_header Server;
+        proxy_set_header Host $http_host;
+        proxy_redirect off;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Scheme $scheme;
+        proxy_pass http://localhost:8000/;
+    }
+}
