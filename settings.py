@@ -51,7 +51,8 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'deploy/media')
+
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -63,6 +64,7 @@ MEDIA_URL = '/media/'
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'deploy/static')
+
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -157,7 +159,7 @@ LOGGING = {
     }
 }
 
-PRODUCTION_HOSTS = []
+PRODUCTION_HOSTS = ['pugpe']
 
 import socket
 hostname = socket.gethostname()
