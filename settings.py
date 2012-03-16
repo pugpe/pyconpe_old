@@ -159,7 +159,7 @@ LOGGING = {
     }
 }
 
-PRODUCTION_HOSTS = ['pugpe']
+PRODUCTION_HOSTS = ['pugpe.nodegrid.com']
 
 import socket
 hostname = socket.gethostname()

@@ -92,9 +92,10 @@ class MainServer(Role):
                 self.context['owner'],
             )
         # settings_local
+        settings_file = 'settings_{0}.py'.format(address)
         self.update_file(
-            'settings_local.py',
-            join(self.context['project_path'], 'settings_local.py'),
+            settings_file,
+            join(self.context['project_path'], settings_file),
             options=self.context,
         )
 
