@@ -1,6 +1,5 @@
 # -*- coding:utf-8 -*-
 # TODO: rollback
-# TODO: Melhor forma de lidar com settings
 import os
 
 from fabric.api import run, env, cd, put, sudo
@@ -25,7 +24,6 @@ def prod():
     env.opts.update({
         'virtualenv': ve,
         'python': os.path.join(ve, 'bin/python'),
-        'local_settings': os.path.dirname(os.path.abspath(__file__)),
         'user': env.user,
     })
 
@@ -48,12 +46,6 @@ def update_supervisord():
               'template_dir': template_dir, 'use_sudo': True}
 
     upload_template('supervisor_gunicorn.conf', include_path, **kwargs)
-
-
-def update_local_settings():
-    # TODO: Find better way
-    ls_path = os.path.join(env.opts['local_settings'], 'settings_local.py')
-    put(ls_path, env.opts['project_path'])
 
 
 def update_repo():
@@ -97,10 +89,9 @@ def supervisor_status():
 def deploy():
     setup_env()
     update_supervisord()
-    #update_local_settings()
     update_repo()
     install_deps()
-    #run_tests()
+    run_tests()
     migrate()
     collect_static()
     restart_supervisord()
