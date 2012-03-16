@@ -8,6 +8,7 @@ TEMPLATE_DEBUG = False
 
 ADMINS = (
     ('Gileno Filho', 'gascf.cin@gmail.com'),
+    ('Fernando Rocha', 'fernandogrd@gmail.com'),
 )
 
 MANAGERS = ADMINS
