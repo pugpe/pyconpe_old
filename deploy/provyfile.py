@@ -92,7 +92,7 @@ class MainServer(Role):
                 self.context['owner'],
             )
         # settings_local
-        settings_file = 'settings_{0}.py'.format(address)
+        settings_file = 'settings_local.py'
         self.update_file(
             settings_file,
             join(self.context['project_path'], settings_file),
@@ -114,7 +114,8 @@ class MainServer(Role):
             role.ensure_package_installed('mysql-devel')
 
 
-address = 'pugpe.nodegrid.com'
+#address = 'pugpe.nodegrid.com'
+address = '23.21.106.248'
 
 servers = {
     'pre_setup': {
